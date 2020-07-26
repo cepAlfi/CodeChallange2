@@ -40,6 +40,17 @@
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
+        android:id="@+id/score_comp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/guideline_kiri" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,6 +60,17 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline_kanan"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/score_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_kanan"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/judul"

@@ -10,6 +10,11 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        var compScore: Int = 0
+        var playerScore: Int = 0
+    }
+
     private lateinit var bindingView: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +33,8 @@ class MainActivity : AppCompatActivity() {
         bindingView.pemain1.visibility = View.INVISIBLE
         bindingView.comp.visibility = View.INVISIBLE
         bindingView.draw.visibility = View.INVISIBLE
+        bindingView.scorePlayer.setText("$playerScore")
+        bindingView.scoreComp.setText("$compScore")
 
 
         var computerChoose: Any
@@ -52,6 +59,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.scissorComp.visibility = View.INVISIBLE
                     bindingView.pemain1.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    playerScore++
+                    bindingView.scorePlayer.setText("$playerScore")
                 }
                 "paper" -> {
                     bindingView.paperComp.setBackgroundColor(Color.parseColor("#F2F6F6"))
@@ -66,6 +75,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.paperComp.visibility = View.INVISIBLE
                     bindingView.comp.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    compScore++
+                    bindingView.scoreComp.setText("$compScore")
                 }
             }
         }
@@ -97,6 +108,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.scissorComp.visibility = View.INVISIBLE
                     bindingView.comp.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    compScore++
+                    bindingView.scoreComp.setText("$compScore")
                 }
                 "scissors" -> {
                     bindingView.scissorComp.setBackgroundColor(Color.parseColor("#F2F6F6"))
@@ -104,6 +117,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.paperComp.visibility = View.INVISIBLE
                     bindingView.pemain1.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    playerScore++
+                    bindingView.scorePlayer.setText("$playerScore")
                 }
             }
         }
@@ -128,6 +143,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.scissorComp.visibility = View.INVISIBLE
                     bindingView.comp.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    compScore++
+                    bindingView.scoreComp.setText("$compScore")
                 }
                 "paper" -> {
                     bindingView.paperComp.setBackgroundColor(Color.parseColor("#F2F6F6"))
@@ -135,6 +152,8 @@ class MainActivity : AppCompatActivity() {
                     bindingView.scissorComp.visibility = View.INVISIBLE
                     bindingView.pemain1.visibility = View.VISIBLE
                     bindingView.vs.visibility = View.INVISIBLE
+                    playerScore++
+                    bindingView.scorePlayer.setText("$playerScore")
                 }
                 "scissors" -> {
                     bindingView.scissorComp.setBackgroundColor(Color.parseColor("#F2F6F6"))
